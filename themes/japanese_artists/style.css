@@ -726,28 +726,37 @@ textarea {
   margin: 0 0 1.5em;
 }
 
+.hero-heading {
+  color: #feffff;
+  text-shadow: 5px 4px 4px rgba(254, 9, 167, 0.5), 8px 7px 7px #367588;
+}
+
 .hero-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 750px));
-  grid-gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
-.hero-gallery .card {
-  background-color: #3d424a;
+.hero-gallery .wp-block-group__inner-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+  gap: 1rem;
+  padding: 0 5%;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
-.hero-gallery .card figure {
-  margin: 0 !important;
+.hero-gallery .wp-block-group__inner-container .wp-block-image img {
+  aspect-ratio: 4/3;
 }
-.hero-gallery .card img {
-  width: min(100%, 750px);
-  height: auto;
-}
-.hero-gallery .card p {
+.hero-gallery .wp-block-group__inner-container .wp-block-image figcaption {
   color: #feffff;
   font-size: 1.5rem;
-  margin: 0;
+  background-color: #3d424a;
+  margin-top: 0;
+  padding: 12px 0;
 }
 
 /* Comments

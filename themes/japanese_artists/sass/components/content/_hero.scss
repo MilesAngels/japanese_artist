@@ -1,27 +1,58 @@
+.hero-heading {
+    color: $white;
+    text-shadow: 5px 4px 4px rgba(254, 9, 167, 0.5),
+    8px 7px 7px rgba(54, 117, 136, 1);
+}
+
 .hero-gallery {
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(100%, 750px) );
-    grid-gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
     justify-content: center;
     text-align: center;
     align-items: center;
-    
-    .card {
-        background-color: #3d424a;
-        figure {
-            margin: 0 !important;
-        }
-        img {
-            width: min(100%, 750px);
-            height: auto;
-        }
+    .wp-block-group__inner-container {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 400px) );
+        gap: 1rem;
+        padding: 0 5%;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        .wp-block-image {
+            img{
+                aspect-ratio: 4 / 3;
+            }
 
-        p {
-            color: $white;
-            font-size: 1.5rem;
-            margin: 0;
-            //padding: 0.75rem;
-        }
+            figcaption {
+                color: $white;
+                font-size: 1.5rem;
+                background-color: #3d424a;
+                margin-top: 0;
+                padding: 12px 0;
+            }
+        }  
     }
     
+    
 }
+
+// @media screen and (min-width: 1024px) {
+//     .hero-gallery {
+//         width: 100%;
+//         .wp-block-group__inner-container{
+//             //grid-template-columns: repeat(auto-fill, min(100%, 500px));
+//             padding: 0 2%;
+//             .card {
+                
+//                 figure {
+        
+//                     img {
+//                         height: 200px !important;
+//                     }
+//                 }
+                
+//             }
+//         }
+//     }
+// }
