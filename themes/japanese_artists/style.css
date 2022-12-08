@@ -698,6 +698,31 @@ html {
   display: block;
 }
 
+.menu-toggle {
+  position: absolute;
+}
+
+.main-navigation.toggled ul {
+  position: absolute;
+  width: 100vw;
+  margin-top: 50px;
+  background-color: red;
+  right: 0;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
