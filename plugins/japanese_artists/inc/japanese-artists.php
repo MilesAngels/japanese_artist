@@ -28,6 +28,42 @@ function hero_gallery_pattern() {
         )
     );
 
-}    
+}
+
+function section_heading() {
+
+    register_block_pattern(
+        'japanese_artists/section_heading',
+        array(
+            'title'       => __( 'Section Heading', 'japanese_artists' ),
+           
+            'description' => _x( 'Heading for Sections', 'japanese_artists' ),
+           
+            'content'     => "<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"typography\":{\"textTransform\":\"uppercase\"}},\"className\":\"artist-section-heading\"} -->\r\n<h2 class=\"has-text-align-center artist-section-heading\" style=\"text-transform:uppercase\"></h2>\r\n<!-- /wp:heading -->",
+           
+            'categories'  => array( 'Japanese Artist Block' ),
+        )
+    );
+
+}
+
+function artist_card() {
+
+    register_block_pattern(
+        'japanese_artists/artist_card',
+        array(
+            'title'       => __( 'Artist Card', 'japanese_artists' ),
+           
+            'description' => _x( 'A card with Japanese Images', 'japanese_artists' ),
+           
+            'content'     => "<!-- wp:heading {\"level\":3} -->\r\n<h3></h3>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:columns -->\r\n<div class=\"wp-block-columns\"><!-- wp:column -->\r\n<div class=\"wp-block-column\"><!-- wp:image -->\r\n<figure class=\"wp-block-image\"><img alt=\"\"/></figure>\r\n<!-- /wp:image --></div>\r\n<!-- /wp:column -->\r\n\r\n<!-- wp:column -->\r\n<div class=\"wp-block-column\"><!-- wp:paragraph -->\r\n<p>Lorem ipsum dolor sit amet consectetur. Velit id egestas id nibh et sit cras sit. Dolor sed phasellus velit nisl id non mauris vehicula tristique. Sed vehicula sit risus nec neque sed scelerisque faucibus. Non sed aenean vulputate erat.</p>\r\n<!-- /wp:paragraph --></div>\r\n<!-- /wp:column --></div>\r\n<!-- /wp:columns -->",
+           
+            'categories'  => array( 'Japanese Artist Block' ),
+        )
+    );
+
+}
 
 add_action( 'init', 'hero_gallery_pattern' );
+add_action( 'init', 'section_heading' );
+add_action('init', 'artist_card');

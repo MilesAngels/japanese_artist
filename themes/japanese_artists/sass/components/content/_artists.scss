@@ -1,0 +1,58 @@
+.artist-section-heading {
+    width: fit-content;
+    color: $white;
+    border-bottom: 2px solid rgba(254, 9, 167, 0.5);
+    box-shadow: 0px 7px 7px 0px rgba(54, 117, 136, 0.3);
+    margin: 0 auto;
+    padding-bottom: 0.5rem;
+}
+
+.ado-heading, .eve-heading, .lisa-heading, .mwam-heading {
+    color: $white;
+    padding: 2% 5%;
+    font-size: 3.5vh;
+}
+
+.ado-image, .eve-image, .lisa-image, .mwam-image {
+    padding: 5% ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+    img {
+        position: relative;
+       width: 100% !important; 
+       max-width: 500px;
+       z-index: 9;
+       //filter: brightness(0.9);
+    }
+}  
+
+.ado-text, .eve-text, .lisa-text, .mwam-text {
+    padding: 2% 5%;
+    color: $white;
+    display: flex;
+    font-size: 2.25vh;
+    align-items: center;
+}
+
+.glass {
+    padding: 5%;
+}
+
+
+// @media screen and (min-width:768px){
+//     .ado-image {
+//         overflow-x: hidden;
+//         background-size: contain;
+//         scale: 1.025;
+//         img {
+//             scale: 1.1;
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 1200px){
+    
+// }

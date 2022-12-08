@@ -2,8 +2,40 @@
 $black: #161D28;
 $white: #feffff;
 
+* {
+	//overflow: hidden;
+	margin: 0;
+}
+ html {
+	height: 100vh;
+ }
+
+
 .site {
 	background-color:$black;
+}
+
+.site-header {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	width: 100%;
+	padding: 10px 5%;
+	display: flex;
+	background: rgba(254, 255, 255, 0.2);
+	backdrop-filter: blur(2px);
+	height: 60px;
+	z-index: 999999;
+	#site-navigation{
+		display: flex;
+		justify-content: flex-end;
+
+		a {
+			color: $white;
+			line-height: 2.5rem;
+		}
+		
+	}
 }
 .main-navigation {
 	display: block;
