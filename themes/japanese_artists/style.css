@@ -621,6 +621,7 @@ textarea {
 --------------------------------------------- */
 * {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -628,7 +629,7 @@ html {
 }
 
 .site {
-  background-color: #161D28;
+  background-color: #161d28;
 }
 
 .site-header {
@@ -638,8 +639,7 @@ html {
   width: 100%;
   padding: 10px 5%;
   display: flex;
-  background: rgba(254, 255, 255, 0.2);
-  backdrop-filter: blur(2px);
+  background-color: #161d28;
   height: 60px;
   z-index: 999999;
 }
@@ -700,16 +700,62 @@ html {
 
 .menu-toggle {
   position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  top: 0;
+}
+.menu-toggle .ham {
+  width: 50px;
+  top: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.menu-toggle .hamRotate.active {
+  transform: rotate(45deg);
+}
+.menu-toggle .hamRotate180.active {
+  transform: rotate(180deg);
+}
+.menu-toggle .line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #feffff;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.menu-toggle .ham4 .top {
+  stroke-dasharray: 40 121;
+}
+.menu-toggle .ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+.menu-toggle .ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+.menu-toggle .ham4.active .bottom {
+  stroke-dashoffset: -68px;
 }
 
 .main-navigation.toggled ul {
   position: absolute;
   width: 100vw;
   margin-top: 50px;
-  background-color: red;
+  top: 0;
   right: 0;
   animation: growDown 300ms ease-in-out forwards;
   transform-origin: top center;
+  text-align: center;
+  text-decoration: none;
+  background: rgba(22, 29, 40, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 20px 0;
 }
 
 @keyframes growDown {
@@ -730,6 +776,12 @@ html {
 
   .main-navigation ul {
     display: flex;
+  }
+  .main-navigation ul li a {
+    padding: 0 15px;
+  }
+  .main-navigation ul li a:last-child {
+    padding: 0 0 0 15px;
   }
 }
 .site-main .comment-navigation,
